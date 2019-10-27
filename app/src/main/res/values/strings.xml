@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Rx Manage</string>
+    <string name="action_settings">Settings</string>
+    <string name="rx_card_1">Rx Card 1</string>
+    <string name="todo">TODO</string>
+    <string name="textview">TextView</string>
+    <string name="rx_symbol">Rx_Symbol</string>
+</resources>
