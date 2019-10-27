@@ -1,8 +1,10 @@
 package com.example.rxmanage
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
+import android.util.Log.d
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
@@ -22,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        //data will eventually fill from database
         val rxDat = listOf(
             RxCardData("Lisdexamfetamine","Central Nervous System Stimulant"),
             RxCardData("Escitalopram","Selective Serotonin Re-uptake Inhibitor"),
@@ -32,7 +33,9 @@ class MainActivity : AppCompatActivity() {
         //Recycler will list the Rx Cards
         cardList.apply {
             layoutManager=LinearLayoutManager(this@MainActivity)
-            adapter = CardListAdaptor(rxDat)
+            adapter = CardListAdaptor(rxDat) {
+                startActivity(Intent(this@MainActivity, RxDetailedView::class.java))
+            }
         }
     }
 

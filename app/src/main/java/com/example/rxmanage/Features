@@ -1,0 +1,15 @@
+        - Implement database
+            . for starters make a table that will hold data relevant to data class RxCardData
+            . later the data base should have separate tables for medications, user info, pharmacy, and physician
+            . a displayRxData table will be maintained based on these tables
+        - create queries to retrieve data
+        - iterate through tables and load data into a list of objects RxCardData
+        - This will be passed into CardListAdaptor and create a Rx Card for each medication
+
+        - create reminder notifications based on doseTime data
+        - notification for when it is time to order refill based on remainingMeds, remainingRefills
+        - notify when a new prescription from Dr is needed based on refills left
+
+
+        ADVANCED FEATURES
+        - automatically
